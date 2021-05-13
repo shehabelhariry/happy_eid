@@ -148,5 +148,6 @@ button {
     width: unset;
     padding-left: 0;
     padding-right: 0;
+    transform: scale(0.6);
   }
 }
