@@ -1,38 +1,152 @@
-.App {
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+}
+
+.mobile_controls {
+  display: none;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  background-repeat: repeat;
+  background-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Kufam";
+}
+
+.main_card {
+  background-color: white;
+  width: calc(100vw - 20rem);
+  padding: 1rem;
+  min-height: calc(100vh - 20rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 3rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #15a89f;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h4 {
+  font-size: 1rem;
+  text-align: center;
+  color: #9e9e9e;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h6 {
+  margin: 0;
+}
+
+.happiness {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100px;
+  text-align: center;
+}
+.operation {
+  margin-top: 40px;
+  display: flex;
+  direction: rtl;
+  justify-content: center;
+  font-size: 3rem;
   flex-direction: column;
   align-items: center;
+}
+
+.operation__params {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.game_container {
+  position: relative;
+  background-color: #add086;
+  width: 400px;
+  margin: 0 auto;
+  height: 400px;
+  overflow: hidden;
+}
+
+.mug {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.mug img {
+  width: 100px;
+}
+
+#target {
+  left: 0;
+}
+
+.target {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  position: absolute;
+  top: -50px;
+}
+
+.lose_panel {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1000;
   color: white;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  border: 0;
+  background: white;
+  padding: 1rem;
+  font-family: "Kufam";
+  font-size: 1rem;
+  border-radius: 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media all and (max-width: 768px) {
+  html {
+    font-size: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .mobile_controls {
+    display: block;
+    text-align: center;
+  }
+
+  .mobile_controls button {
+    font-size: 4rem;
+  }
+
+  .main_card {
+    width: unset;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
